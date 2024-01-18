@@ -38,8 +38,8 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
-  CUSTOM_SCRIPT_1: diy-part1_openwrt.sh
-  CUSTOM_SCRIPT_2: diy-part2_openwrt.sh
+  CUSTOM_SCRIPT_1: diy-part1.sh
+  CUSTOM_SCRIPT_2: diy-part2.sh
   STORE_PRODUCTS: false
   STORE_FIRMWARE: true
   RELEASE_FIRMWARE: true
