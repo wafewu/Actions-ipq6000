@@ -11,9 +11,8 @@
 #
 
 # Add a feed source
-# sed -i '1,2d' feeds.conf.default
-# sed -i '$a src-git packages https://github.com/KK2018gh/ipq6000_packages.git;1806' feeds.conf.default
-# sed -i '$a src-git luci https://github.com/KK2018gh/ipq6000_luci.git;1806' feeds.conf.default
+echo sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+echo sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
 # Add luci-theme-argon
 # rm -rf lede/package/lean/luci-theme-argon
@@ -24,11 +23,11 @@
 
 # 添加额外软件包
 # Adguardhome
-git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+#git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # MosDNS
 #git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
 # 科学上网
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
+#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
 
 # 修改版本为编译日期-lede
 date_version=$(date +"%y.%m.%d")
