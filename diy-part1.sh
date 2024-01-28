@@ -26,10 +26,10 @@ git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/lu
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
 
 # 在线用户
-git_sparse_clone main https://github.com/haiibo/packages luci-app-onliner
-sed -i '$i uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
-sed -i '$i uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
-chmod 755 package/luci-app-onliner/root/usr/share/onliner/setnlbw.sh
+#git_sparse_clone main https://github.com/haiibo/packages luci-app-onliner
+#sed -i '$i uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
+#sed -i '$i uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
+#chmod 755 package/luci-app-onliner/root/usr/share/onliner/setnlbw.sh
 
 
 
