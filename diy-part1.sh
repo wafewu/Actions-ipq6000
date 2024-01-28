@@ -13,7 +13,6 @@
 
 
 # Add a feed source
-sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
 
 
@@ -56,6 +55,3 @@ sed -i 's/TARGET_CFLAGS.*/TARGET_CFLAGS += -DHAVE_MAP_SYNC -D_LARGEFILE64_SOURCE
 #find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_URL:=@GHREPO/PKG_SOURCE_URL:=https:\/\/github.com/g' {}
 #find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_URL:=@GHCODELOAD/PKG_SOURCE_URL:=https:\/\/codeload.github.com/g' {}
 
-
-./scripts/feeds update -a
-./scripts/feeds install -a
