@@ -27,6 +27,7 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-
 
 # Themes
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages package/luci-app-argone-config
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages package/luci-theme-argone
 
 
 
