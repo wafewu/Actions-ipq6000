@@ -109,7 +109,7 @@ jobs:
 
     - name: Configuration Customization - ax18
       env:
-        CONFIG_FILE: 'pro.config'
+        CONFIG_FILE: 'znm2-mini.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         #chmod +x ./customize.sh && ./customize.sh
