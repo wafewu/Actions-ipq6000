@@ -89,10 +89,9 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
-        ./scripts/feeds update -a
-        pushd feeds/packages/lang
-        rm -fr golang && svn co https://github.com/sbwml/packages_lang_golang
-        popd
+       cd openwrt
+       rm -rf feeds/packages/lang/golang
+       git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
         ./scripts/feeds install -a
         ./scripts/feeds install -a
         
