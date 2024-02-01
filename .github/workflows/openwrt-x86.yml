@@ -71,7 +71,7 @@ jobs:
         REPO_URL: https://github.com/sdf8057/ipq6000.git
         REPO_BRANCH: master
       run: |
-        git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
+        git clone --depth 1 $REPO_URL -b $REPO_BRANCH ipq6000
         
     #- name: Update feeds.conf.default
      # run: |
@@ -80,16 +80,16 @@ jobs:
         
     - name: Update path
       run: |
-        cd openwrt
+        cd ipq6000
         #curl https://raw.githubusercontent.com/lauren12133/OpenWrt-Build/main/ax18cpupath/path.sh | bash
         
         cat target/linux/ipq60xx/files-4.4/arch/arm64/boot/dts/qcom/qcom-ipq6000-cpu-opp.dtsi
         echo "cpu freq"    
         
     - name: Update & Install feeds
-      working-directory: ./openwrt
+      working-directory: ./ipq6000
       run: |
-       cd openwrt
+       cd ipq6000
        rm -rf feeds/packages/lang/golang
        git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
         ./scripts/feeds install -a
@@ -116,24 +116,24 @@ jobs:
       env:
         CONFIG_FILE: 'znm2-mini.config'
       run: |
-        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE ipq6000/.config
         #chmod +x ./customize.sh && ./customize.sh
-        cd openwrt && make defconfig
+        cd ipq6000 && make defconfig
         
     - name: Download package
-      working-directory: ./openwrt
+      working-directory: ./ipq6000
       run: |
         make download -j$(nproc)
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
     - name: Build firmware
-      working-directory: ./openwrt
+      working-directory: ./ipq6000
       run: |
         make -j2 V=s
 
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: OpenWrt
-        path: openwrt/bin
+        name: ipq6000
+        path: ipq6000/bin
