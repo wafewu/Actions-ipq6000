@@ -67,10 +67,10 @@ jobs:
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         
-    - name: Update feeds.conf.default
-      run: |
-        cd openwrt
-        git clone https://github.com/nixonli/ddns-scripts_dnspod.git package/ddns-scripts_dnspod
+    #- name: Update feeds.conf.default
+     # run: |
+       # cd openwrt
+        #git clone https://github.com/nixonli/ddns-scripts_dnspod.git package/ddns-scripts_dnspod
         
     - name: Update path
       run: |
@@ -107,7 +107,7 @@ jobs:
     #  run: |
     #    git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-jerrykuku
 
-    - name: Configuration Customization - ax18
+    - name: Configuration Customization - znm2
       env:
         CONFIG_FILE: 'znm2-mini.config'
       run: |
