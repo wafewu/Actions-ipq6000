@@ -7,10 +7,16 @@
 #=================================================
 
 name: znm2-mini
-
+# Add a button to trigger the workflow
 on: 
-  release:
-    types: [published]
+  repository_dispatch:
+  workflow_dispatch:
+
+
+
+#on: 
+  #release:
+    #types: [published]
 
   #push:
    # branches: 
@@ -19,8 +25,8 @@ on:
   schedule:
     - cron: 0 20 1 * *
   
-  watch:
-   types: [started]
+  #watch:
+  # types: [started]
   
 
 jobs:
