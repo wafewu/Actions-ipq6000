@@ -13,7 +13,7 @@
 #-------------------------------------------------------------------------------------------------------
 
 # Workflow name which is showed in GitHub Actions.
-name: Build OpenWrt
+name: znm2-max
 
 on:
   workflow_dispatch:
