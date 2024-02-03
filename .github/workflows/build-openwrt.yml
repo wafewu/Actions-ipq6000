@@ -37,8 +37,8 @@ env:
   # REPO_URL: https://github.com/KK2018gh/ipq6000-sdf8057.git
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: znm2-mini.config
-  #CONFIG_FILE: znm2-max.config
+  #CONFIG_FILE: znm2-mini.config
+  CONFIG_FILE: znm2-max.config
   CUSTOM_SCRIPT_1: diy-part1.sh
   CUSTOM_SCRIPT_2: diy-part2.sh
   STORE_PRODUCTS: false
@@ -64,6 +64,7 @@ jobs:
           sudo timedatectl set-timezone "$TIME_ZONE"
           sudo mkdir -p /workdir
           sudo chown $USER:$GROUPS /workdir
+          sudo -E apt install clang
           
       - name: Clone source code
         working-directory: /workdir
