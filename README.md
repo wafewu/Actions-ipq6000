@@ -9,15 +9,10 @@ adguardhome的缓存日志会一直占用空间，可以通过计划任务删除
 ![image](https://github.com/lfsakura0/Actions-ipq6000-mt798x-openwrt/assets/135017778/bd331458-57bf-4c5d-b19b-0937c2746ccf)
 
 ![image](https://github.com/lfsakura0/Actions-ipq6000-mt798x-openwrt/assets/135017778/a17411a7-9873-411e-97a9-782f544fe2a3)
-
 ![image](https://github.com/lfsakura0/Actions-ipq6000-mt798x-openwrt/assets/135017778/3e01d9fd-a2a0-4137-bd0a-dfc6f85b8f5b)
-
 ![image](https://github.com/lfsakura0/Actions-ipq6000-mt798x-openwrt/assets/135017778/12e946d3-49f9-478f-a97b-9b2de43611d3)
-
 ![image](https://github.com/lfsakura0/Actions-ipq6000-mt798x-openwrt/assets/135017778/5144595a-02d4-427f-9295-568db861c252)
-
 ![image](https://github.com/lfsakura0/Actions-ipq6000-mt798x-openwrt/assets/135017778/40aba043-5e1a-4834-89a5-7eed98503098)
-
 ![image](https://github.com/lfsakura0/Actions-ipq6000-mt798x-openwrt/assets/135017778/6b2de639-e252-41c7-9a12-1c824d3ce04f)
 
 
