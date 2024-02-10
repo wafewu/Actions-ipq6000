@@ -38,8 +38,8 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: ./config/znm2-mini.config
-  CUSTOM_SCRIPT_1: ./scripts/znm2/diy-part1.sh
-  CUSTOM_SCRIPT_2: ./scripts/znm2/diy-part2.sh
+  CUSTOM_SCRIPT_1: ./scripts/ipq6000/diy-part1.sh
+  CUSTOM_SCRIPT_2: ./scripts/ipq6000/diy-part2.sh
   STORE_PRODUCTS: false
   STORE_FIRMWARE: true
   RELEASE_FIRMWARE: true
