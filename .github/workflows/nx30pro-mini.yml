@@ -50,8 +50,8 @@ env:
   REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: ./config/nx30pro-mini.config
-  DIY_P1_SH: diy-part1.sh
-  DIY_P2_SH: diy-part2.sh
+  DIY_P1_SH: ./scripts/mt798x/diy-part1.sh
+  DIY_P2_SH: ./scripts/mt798x/diy-part2.sh
   TZ: Asia/Shanghai
 
 jobs:
