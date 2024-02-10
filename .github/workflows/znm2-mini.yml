@@ -37,9 +37,9 @@ env:
   # REPO_URL: https://github.com/KK2018gh/ipq6000-sdf8057.git
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: znm2-mini.config
-  CUSTOM_SCRIPT_1: diy-part1.sh
-  CUSTOM_SCRIPT_2: diy-part2.sh
+  CONFIG_FILE: ./config/znm2-mini.config
+  CUSTOM_SCRIPT_1: ./scripts/znm2/diy-part1.sh
+  CUSTOM_SCRIPT_2: ./scripts/znm2/diy-part2.sh
   STORE_PRODUCTS: false
   STORE_FIRMWARE: true
   RELEASE_FIRMWARE: true
