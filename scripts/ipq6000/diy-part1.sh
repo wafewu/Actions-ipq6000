@@ -12,9 +12,7 @@
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
 
-sudo apt update
-sudo apt install libfuse-dev
-sudo apt install libopenssl-legacy
+
 
 # 添加额外软件包
 # Adguardhome
