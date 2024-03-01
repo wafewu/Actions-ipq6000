@@ -11,8 +11,7 @@
 #
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/luci/applications/luci-app-smartdns
-rm -rf feeds/luci/applications/luci-app-openclash
-rm -rf feeds/luci/applications/luci-app-eqos
+
 
 # curl/8.5.0 - fix passwall `time_pretransfer` check
 rm -rf feeds/packages/net/curl
