@@ -9,6 +9,47 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
+rm -rf feeds/packages/net/smartdns
+rm -rf feeds/luci/applications/luci-app-smartdns
+rm -rf feeds/luci/applications/luci-app-openclash
+rm -rf feeds/luci/applications/luci-app-eqos
+
+# curl/8.5.0 - fix passwall `time_pretransfer` check
+rm -rf feeds/packages/net/curl
+git clone --depth=1 https://github.com/sbwml/feeds_packages_net_curl feeds/packages/net/curl
+
+# nghttp3
+rm -rf feeds/packages/libs/nghttp3
+git clone --depth=1 https://github.com/sbwml/package_libs_nghttp3 package/libs/nghttp3
+
+# ngtcp2
+rm -rf feeds/packages/libs/ngtcp2
+git clone --depth=1 https://github.com/sbwml/package_libs_ngtcp2 package/libs/ngtcp2
+
+
+
+
+git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb package/lua-maxminddb
+
+
+
+
+
+
+
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+
+
+
+
+sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+./scripts/feeds update -a && ./scripts/feeds install -a
+
+
+
+
+
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
