@@ -43,7 +43,6 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-./scripts/feeds update -a && ./scripts/feeds install -a
 
 
 # 添加额外软件包
