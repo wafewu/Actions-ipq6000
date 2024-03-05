@@ -11,7 +11,7 @@
 #
 
 
-rm -rf feeds/luci/applications/luci-app-openclash
+
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/luci/applications/luci-app-smartdns
 
@@ -35,7 +35,7 @@ git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/l
 git clone --depth=1 -b master https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
 
-git clone master https://github.com/vernesong/OpenClash luci-app-openclash
+
 
 # 添加额外软件包
 # Adguardhome
