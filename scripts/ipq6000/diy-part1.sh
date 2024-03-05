@@ -11,10 +11,9 @@
 #
 
 
-
+rm -rf feeds/luci/applications/luci-app-openclash
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/luci/applications/luci-app-smartdns
-
 
 # curl/8.5.0 - fix passwall `time_pretransfer` check
 rm -rf feeds/packages/net/curl
@@ -28,22 +27,15 @@ git clone --depth=1 https://github.com/sbwml/package_libs_nghttp3 package/libs/n
 rm -rf feeds/packages/libs/ngtcp2
 git clone --depth=1 https://github.com/sbwml/package_libs_ngtcp2 package/libs/ngtcp2
 
-
-
-
 git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb package/lua-maxminddb
-
-
-
-
-
-
 
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
-sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+git clone --depth=1 -b master https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
 
+git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 
 # 添加额外软件包
 # Adguardhome
